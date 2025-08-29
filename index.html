@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <div class="card-header">
+                <h1 id="card-title">Welcome back</h1>
+                <p id="card-description">Enter your credentials to access your account</p>
+            </div>
+            
+            <div class="card-content">
+                <form id="auth-form">
+                    <!-- Name field (hidden by default) -->
+                    <div class="form-group" id="name-group" style="display: none;">
+                        <label for="name">Full Name</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <!-- Password field -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <circle cx="12" cy="16" r="1"></circle>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <button type="button" class="password-toggle" id="password-toggle">
+                                <svg id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password field (hidden by default) -->
+                    <div class="form-group" id="confirm-password-group" style="display: none;">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <circle cx="12" cy="16" r="1"></circle>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submit-btn">Sign In</button>
+                </form>
+
+                <!-- Forgot password link (shown only in login mode) -->
+                <div class="forgot-password" id="forgot-password">
+                    <button type="button" class="link-btn">Forgot your password?</button>
+                </div>
+
+                <!-- Mode toggle -->
+                <div class="mode-toggle">
+                    <p id="toggle-text">Don't have an account?</p>
+                    <button type="button" class="link-btn" id="mode-toggle-btn">Sign up here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
